@@ -59,12 +59,15 @@
       var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
       v.onload = function() {
         window.voiceflow.chat.load({
-          verify: { projectID: '67470081fd9855545650ff77' },
+          verify: { projectID: '67fc92efcac6fc6f1a845a14' },
           url: 'https://general-runtime.voiceflow.com',
-          versionID: 'production'
+          versionID: 'production',
+          voice: {
+            url: "https://runtime-api.voiceflow.com"
+          }
         });
       }
-      v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+      v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
   })(document, 'script');
 </script>
 </body>
