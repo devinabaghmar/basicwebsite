@@ -68,7 +68,7 @@
       v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
   })(document, 'script');
 </script> -->
-    <!--  -->
+    <!--  
     <script type="text/javascript">
   (function(d, t) {
       var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
@@ -84,6 +84,59 @@
       }
       v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
   })(document, 'script');
+</script> -->
+
+<script type="text/javascript">
+(function (d, t) {
+  var v = d.createElement(t),
+    s = d.getElementsByTagName(t)[0];
+
+  v.onload = function () {
+    window.voiceflow.chat
+      .load({
+        verify: { projectID: "68a800d6508ee0209fb27ca0" },
+        url: "https://general-runtime.voiceflow.com",
+        versionID: "development",
+        voice: {
+          url: "https://runtime-api.voiceflow.com",
+        },
+        assistant: {
+          persistence: "memory",
+        },
+        launch: {
+          event: {
+            type: "event",
+            payload: {
+              event: {
+                name: "Chip_Clicked",
+                trade: "HVAC",
+                zip: "78754",
+                prompt: "Discounts in Austin",
+                attribution: {},
+                features: {
+                  inbound_calls: true,
+                  promotions: false,
+                },
+                heap_identity: 0,
+                heap_session_id: 0,
+                lead_form_url:
+                  "https://tracking.smartestlifestyletrends.com/click/1",
+                query_string:
+                  "?cep=Asu1JgzlcF6KjCs5GvQNsNFMBRXXypicCoYNgZBVpoDf-Qos28YY5W8Jp8bn5YkeqYbBZMxuA8s-ezjPVxXkY8yKaTOeaKq1zh5v-WZEHlCr_1slGCyTeXMlDQfg1dlbdFbbeYpHNu82AQcd8kNN5E_FEQHyd70RShQaJhwqk8SJCxLyix0291VBZgdm2OVxljeiA-Bdrb3vSsx-NjvC1_fwAF7gqqTzf0SGiP13PaO7yB8gmh7sVQBeDlD4EnNJYA7JB0J97PNa9BQwsuZ-JxJKj0eEEOK4jZ-vcFLITUbhyFuXmGiaXkA9GNImHYTt0ppXIbKEcWD-3nX4SBXVGqqCdJRltOUJ45zGeli8BxScTlKC8LIrE2l6Yht6s4Dl7QDyK8-OYok6i16-xj1Eeqzb3nejh4yLboTsFL6WaEy0QDKOvpNlSUx5XaTTEWRcDmxBqgAZvCrtEa3sRQ6STPZgM75QOYoWSsEBE_FO5CJTB0U4SzDAVe7XStw0BlZox535UPL9TC548NU9zqrKctvDqvyOR8kqhZCptk5E8Vb2a6jLBz8LgsKyoBNtvXQ6ETIpm4gT0ksKrWqILF3dDOu7eSufcXorqjuKPkRezAM",
+              },
+            },
+          },
+        },
+      })
+      .then(() => {
+        window.voiceflow.chat.open();
+      });
+  };
+
+  v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs";
+  v.type = "text/javascript";
+  s.parentNode.insertBefore(v, s);
+})(document, "script");
 </script>
     
 </body>
