@@ -80,9 +80,16 @@
           voice: {
             url: "https://runtime-api.voiceflow.com"
           }
+        }).then(() => {
+          // Open chat after 3 seconds
+          setTimeout(() => {
+            window.voiceflow.chat.open();
+          }, 3000);
         });
       }
-      v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+      v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; 
+      v.type = "text/javascript"; 
+      s.parentNode.insertBefore(v, s);
   })(document, 'script');
 </script>
     
