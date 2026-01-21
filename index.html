@@ -81,12 +81,11 @@
             url: "https://runtime-api.voiceflow.com"
           }
         }).then(() => {
-          // Ensure the widget starts muted
-          window.voiceflow.chat.mute();
 
           // Open chat after 3 seconds
           setTimeout(() => {
             window.voiceflow.chat.open();
+            window.voiceflow.chat.mute();  // Ensure the widget starts muted
           }, 3000);
         });
       }
